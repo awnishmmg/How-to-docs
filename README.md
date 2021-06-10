@@ -7,3 +7,6 @@ https://jamshidhashimi.com/2013/04/12/dynamically-add-javascript-and-css-files-i
 
 # How to Add Custom date picker using jquery ui
 https://tamble.github.io/jquery-ui-daterangepicker/
+
+# Best PlugIn to Handle Multiple File Uploaded using Progress Bar in Built in JQuery UI
+http://hayageek.com/docs/jquery-upload-file.php#multi
