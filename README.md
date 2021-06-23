@@ -63,3 +63,6 @@ $(document).ready(function(){
    
    
 });
+
+#Crud using JSON
+https://stackoverflow.com/questions/38301457/php-crud-json-file-instead-of-a-database-like-mysql
