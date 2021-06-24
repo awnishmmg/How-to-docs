@@ -70,6 +70,7 @@ https://stackoverflow.com/questions/38301457/php-crud-json-file-instead-of-a-dat
 #Function to write Data in local Storage
 https://stackoverflow.com/questions/16083919/push-json-objects-to-array-in-localstorage
 
+
 function SaveDataToLocalStorage(data)
 {
     var a = [];
