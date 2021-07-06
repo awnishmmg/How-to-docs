@@ -68,10 +68,10 @@ $(document).ready(function(){
    
 });
 
-#Crud using JSON
+# Crud using JSON
 https://stackoverflow.com/questions/38301457/php-crud-json-file-instead-of-a-database-like-mysql
 
-#Function to write Data in local Storage
+# Function to write Data in local Storage
 
 https://stackoverflow.com/questions/16083919/push-json-objects-to-array-in-localstorage
 
