@@ -2,6 +2,11 @@
 # How to create Custom Login System Without Authentication Module
 https://codingdriver.com/laravel-custom-authentication-tutorial-with-example.html
 
+# Important Laravel Command 
+1. php artisan inspire
+2. php artisan migrate --pretend --ansi > dump.sql [Overwrite]
+3. php artisan migrate --pretend --ansi >> dump.sql [Append Mode]
+
 # How-to-docs
 Here I Add the Important Link of Stack Over Flow
 
