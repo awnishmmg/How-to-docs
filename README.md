@@ -6,6 +6,8 @@ https://codingdriver.com/laravel-custom-authentication-tutorial-with-example.htm
 1. php artisan inspire
 2. php artisan migrate --pretend --ansi > dump.sql [Overwrite]
 3. php artisan migrate --pretend --ansi >> dump.sql [Append Mode]
+4. echo <output-string> > <output.txt file> [Overwrite Mode]
+   echo <output-string> >> <output.txt file> [Overwrite Mode]
 
 # How-to-docs
 Here I Add the Important Link of Stack Over Flow
