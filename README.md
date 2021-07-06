@@ -68,8 +68,8 @@ $(document).ready(function(){
 https://stackoverflow.com/questions/38301457/php-crud-json-file-instead-of-a-database-like-mysql
 
 #Function to write Data in local Storage
-https://stackoverflow.com/questions/16083919/push-json-objects-to-array-in-localstorage
 
+https://stackoverflow.com/questions/16083919/push-json-objects-to-array-in-localstorage
 
 function SaveDataToLocalStorage(data)
 {
@@ -83,3 +83,6 @@ function SaveDataToLocalStorage(data)
     // Re-serialize the array back into a string and store it in localStorage
     localStorage.setItem('session', JSON.stringify(a));
 }
+
+#How to create Custom Login System Without Authentication Module
+https://codingdriver.com/laravel-custom-authentication-tutorial-with-example.html
