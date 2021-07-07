@@ -1,4 +1,8 @@
 
+
+# Handling the File 
+https://stackoverflow.com/questions/19280901/javascript-upload-and-parse-file-on-fly
+
 # Best Match case for mobile numbers
 https://stackoverflow.com/questions/3813195/regular-expression-for-indian-mobile-numbers/3813226#3813226
 
