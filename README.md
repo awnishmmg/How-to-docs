@@ -1,4 +1,8 @@
  
+# Replace Single or Double Qoutes from data
+
+https://stackoverflow.com/questions/14743812/how-to-use-str-replace-to-replace-single-and-double-quotes
+
 # Break Large File into Chunks
 https://stackoverflow.com/questions/4694394/break-a-large-file-into-many-smaller-files-with-php
 
