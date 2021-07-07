@@ -1,3 +1,6 @@
+ 
+# Break Large File into Chunks
+https://stackoverflow.com/questions/4694394/break-a-large-file-into-many-smaller-files-with-php
 
 # How to create Custom Login System Without Authentication Module
 https://codingdriver.com/laravel-custom-authentication-tutorial-with-example.html
