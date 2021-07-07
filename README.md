@@ -1,4 +1,7 @@
- 
+
+# Best Match case for mobile numbers
+https://stackoverflow.com/questions/3813195/regular-expression-for-indian-mobile-numbers/3813226#3813226
+
 # Replace Single or Double Qoutes from data
 
 https://stackoverflow.com/questions/14743812/how-to-use-str-replace-to-replace-single-and-double-quotes
