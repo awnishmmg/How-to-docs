@@ -1,3 +1,20 @@
+# Best Way to Connect with Mysqli
+try
+{	
+	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+    if($con=mysqli_connect($hostname,$username,$password,$dbname)){
+   //do something
+    }
+    else
+    {
+        throw new Exception;
+    }
+}
+catch(Exception $e)
+{
+    echo $e->getMessage();
+}
+
 
 
 # Handling the File 
