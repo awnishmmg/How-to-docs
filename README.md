@@ -1,4 +1,5 @@
 # Best Way to Connect with Mysqli
+```
 try
 {	
 	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
@@ -15,7 +16,7 @@ catch(Exception $e)
     echo $e->getMessage();
 }
 
-
+```
 
 # Handling the File 
 https://stackoverflow.com/questions/19280901/javascript-upload-and-parse-file-on-fly
