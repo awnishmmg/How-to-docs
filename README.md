@@ -56,7 +56,7 @@ http://hayageek.com/docs/jquery-upload-file.php#multi
 
 # Self Executing function is best Technique for Running Ajax Script inside loop
 https://stackoverflow.com/questions/21819905/jquery-ajax-calls-in-for-loop
-
+```
 $(document).ready(function(){
    var entity_class =  document.getElementsByClassName("dynamic_entityID");
    var entity_id = [];
@@ -106,7 +106,7 @@ $(document).ready(function(){
    
    
 });
-
+```
 # Crud using JSON
 https://stackoverflow.com/questions/38301457/php-crud-json-file-instead-of-a-database-like-mysql
 
@@ -114,6 +114,7 @@ https://stackoverflow.com/questions/38301457/php-crud-json-file-instead-of-a-dat
 
 https://stackoverflow.com/questions/16083919/push-json-objects-to-array-in-localstorage
 
+```
 function SaveDataToLocalStorage(data)
 {
     var a = [];
@@ -126,4 +127,4 @@ function SaveDataToLocalStorage(data)
     // Re-serialize the array back into a string and store it in localStorage
     localStorage.setItem('session', JSON.stringify(a));
 }
-
+```
