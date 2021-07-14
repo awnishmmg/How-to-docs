@@ -1,3 +1,81 @@
+# Magnipopup for the Image Gallery View
+## Documentation Link 
+https://dimsemenov.com/plugins/magnific-popup/documentation.html
+## Code Snippet
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Gallery View</h1>
+  <p>Click On the Image</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+      <div class="gallery-container">
+            <div class="col-md-2">
+                <a href="https://images.unsplash.com/photo-1626160200758-71b8bf10d34f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80" target="_blank">
+                  <img src="https://images.unsplash.com/photo-1626160200758-71b8bf10d34f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80" class="image-fluid">
+                </a>
+          </div>
+          <div class="col-md-2">
+                <a href="https://images.unsplash.com/photo-1626197219310-8be29c1316be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" target="_blank">
+                  <img src="https://images.unsplash.com/photo-1626197219310-8be29c1316be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80">
+                </a>
+          </div>
+     </div>
+  </div>
+</div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script type="text/javascript">
+    // Important Line 
+    $(document).ready(function(){
+
+        $(".gallery-container").magnificPopup({  // Initialise the MagnificPopup
+          delegate: 'a',
+          type:'image',
+          gallery: {
+            enabled: true   //Enable the Gallery Mode
+             },
+        });
+
+        //Automatic Open the First Image 
+        $(".gallery-container a").click();  // Auto pop-up
+    });
+
+  </script>
+</html>
+
+
+
+
+```
+
+
+
+
+
 # Best Way to Connect with Mysqli
 ```
 try
