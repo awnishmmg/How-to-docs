@@ -1,3 +1,8 @@
+# Working with Imagick Function to Increase the Resolution
+https://stackoverflow.com/questions/13656631/how-to-increase-image-resolution-in-imagemagick-in-php
+# Working with Imagick Function to Convert pdf to image
+https://stackoverflow.com/questions/57671994/while-creating-image-from-pdf-using-imagick-i-get-the-following-error-can-anyb
+
 # Magnipopup for the Image Gallery View
 ## Documentation Link 
 https://dimsemenov.com/plugins/magnific-popup/documentation.html
