@@ -1,3 +1,6 @@
+# How to Force File Download without getting Corrupt
+
+https://stackoverflow.com/questions/31042486/downloaded-file-using-download-php-from-server-wont-open-why/31054426
 
 # How to Force PDF File to open in browser
 https://www.geeksforgeeks.org/how-to-open-a-pdf-files-in-web-browser-using-php/
