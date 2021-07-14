@@ -1,3 +1,15 @@
+# How to Open PDF file using google pdf view in Iframes
+https://stackoverflow.com/questions/19654577/html-embedded-pdf-iframe/66548544#66548544
+
+## Code Snippet
+```
+<object data="<?php echo $assets_url; ?>" type="application/pdf" width="100%" height="1200">
+    <iframe src="https://docs.google.com/viewer?url=<?php echo $assets_url; ?>&embedded=true"></iframe>
+    <parm name="view" value="FitH" />
+</object>
+```
+
+
 # Working with Imagick Function to Increase the Resolution
 https://stackoverflow.com/questions/13656631/how-to-increase-image-resolution-in-imagemagick-in-php
 # Working with Imagick Function to Convert pdf to image
