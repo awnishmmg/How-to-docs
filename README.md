@@ -1,3 +1,7 @@
+
+# How to Force PDF File to open in browser
+https://www.geeksforgeeks.org/how-to-open-a-pdf-files-in-web-browser-using-php/
+
 # How to Open PDF file using google pdf view in Iframes
 https://stackoverflow.com/questions/19654577/html-embedded-pdf-iframe/66548544#66548544
 
