@@ -1,3 +1,34 @@
+# How to Force Zoom in Magnific.popup 
+https://stackoverflow.com/questions/33431471/how-to-zoom-in-120-150-and-180-on-an-image
+
+# How to Set the Date in JQuery date picker
+
+```
+$('#datepicker').datepicker({dateFormat: 'yy-mm-dd'}).datepicker('setDate', '2010-07-25')
+```
+### Code Snippet for JQyuery UI Plug-in 
+```
+var new_date = new Date();
+  console.log(new_date);
+  var previous_month = new_date.getMonth();
+  var current_year = new_date.getFullYear(); 
+  var set_date = previous_month+"-"+current_year;
+
+  $(document).ready(function() {
+
+    $("#month").datepicker( {
+      format: "mm-yyyy",
+      viewMode: "months", 
+      minViewMode: "months",
+      orientation: "bottom left",
+    }).datepicker("setDate",set_date);
+    
+```
+## Important Note 
+While Converting the date when date while cannot be converted untill and unless it is converted to complete valid date.'
+for example if we want to convert 06-2021 To July-2021 Then if we convert 06 will be converted by 2021 will become 1970 Because Time Line missmatch to convert it
+you should convert it to full date for example "01-".06-2021 ----------> Will Convert Perfectly.
+
 # How to Force File Download without getting Corrupt
 
 https://stackoverflow.com/questions/31042486/downloaded-file-using-download-php-from-server-wont-open-why/31054426
