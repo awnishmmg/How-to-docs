@@ -142,6 +142,8 @@
 ```
 ### Parsing using Parse-Json.php In php
 
+![screencapture-localhost-json-to-html-parse-json-php-2021-07-22-18_39_16 (1)](https://user-images.githubusercontent.com/55636215/126644401-98329ee0-0953-43d8-85cb-fb888fb1bcd3.png)
+
 ```
 <?php
 
