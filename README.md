@@ -1,3 +1,37 @@
+# Important Interview Question on PHP
+
+```
+Question On PHP
+****************
+1. Difference B/w echo & print
+2. How many argument you can pass in print_r
+3. How to Iterate Index array in foreach loop 
+4. Difference B/w Index Array and Foreach loop
+5. Difference B/w Array-combine and Array Merge
+6. What is Common Error That Occurs in Array-Combine
+7. Connection B/W Mysqli_connect() with SQLException
+8. Any 5 Magic Function and 5 Magic Constants
+7. Hashing and Salting Differences
+8. What is Password_verify Function
+9. How to Handle Undefined Index Error
+	1. Using ternary Operator
+	2. Using Nullcollascing Operator in PHP 2.7
+
+10. What is SQL Injection How will you prevent it Most Popular Practices
+	Answer:- 1. Prepared Statement
+	2. PD0
+	3. Sanitising
+	4. Stored Procedures
+11. How to make Constants In PHP?
+12. What are Error Level ? How many types of Error Levels are there.
+13. What is session & Cookies which is more secure
+14. What are Environment Variabels How can you Import them In PHP
+15. How to see PHP Configurations
+
+```
+
+
+
 # How to Parse Json to Html Table
 ### data.json 
 ```
