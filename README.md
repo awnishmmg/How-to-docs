@@ -3,6 +3,10 @@ http://durgasoft.com/free-corejava-with-scjp-ocjp-durga-videos.asp
 Notes
 https://drive.google.com/drive/folders/1CbjEwD5RI2OqrtXphUbmtLjeoNPG_W8i
 
+# Best PHP Youtube PHP Lectures
+### Coding Passing Income | https://www.youtube.com/c/CodingPassiveIncome/playlists
+### Sonar System | https://www.youtube.com/channel/UCkJYfCcenyjHr3DZ9JWHbkQ
+
 # How to setup mulitple Application at different Subdomain and to feed with single base_system_installation.
 
 # How to Change the base_url as dynamically As per Requirement in the 
