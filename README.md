@@ -3,6 +3,36 @@ http://durgasoft.com/free-corejava-with-scjp-ocjp-durga-videos.asp
 Notes
 https://drive.google.com/drive/folders/1CbjEwD5RI2OqrtXphUbmtLjeoNPG_W8i
 
+# How to setup mulitple Application at different Subdomain and to feed with single base_system_installation.
+### Make a env_helper.php file and write the following code
+```
+if(!function_exists('default_controller')){
+    
+    function default_controller(){
+        
+            $ci =& get_instance();
+            
+            $env_settings = $ci->config->item('env_settings');
+            $base_url = base_url();
+            foreach($env_settings as $role => $settings){
+            if($base_url == $settings['domain']){
+                require_once APPPATH."{$settings['controller_path']}.php";
+                $classname = basename($settings['controller_path']);
+                $method = $settings['method'];
+                $object = new $classname();
+                
+                call_user_func(array($object,$method),array());
+                     
+                }//end if
+            }
+             
+            
+    }
+
+}
+
+
+```
 
 # Important Interview Question on PHP
 
