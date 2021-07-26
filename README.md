@@ -4,6 +4,14 @@ Notes
 https://drive.google.com/drive/folders/1CbjEwD5RI2OqrtXphUbmtLjeoNPG_W8i
 
 # How to setup mulitple Application at different Subdomain and to feed with single base_system_installation.
+
+# How to Change the base_url as dynamically As per Requirement in the 
+
+```
+$this->config->set_item('base_url','http://example.com/xyz') ;
+
+```
+
 ### Make a env_helper.php file and write the following code
 ```
 if(!function_exists('default_controller')){
