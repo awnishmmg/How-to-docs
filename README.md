@@ -1,3 +1,7 @@
+# Customised Url for CodeIgnitor-remove-index-php-minimize-url
+
+https://www.web-and-development.com/codeigniter-remove-index-php-minimize-url/
+
 # OCJP Videos Lectures
 http://durgasoft.com/free-corejava-with-scjp-ocjp-durga-videos.asp
 Notes
