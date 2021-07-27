@@ -653,6 +653,15 @@ Question On PHP
 14. What are Environment Variabels How can you Import them In PHP
 15. How to see PHP Configurations
 
+16. $file_extension = end(explode('.', $file_name)); //ERROR ON THIS LINE Why?
+Answer  :- 
+Assign the result of explode to a variable and pass that variable to end:
+$tmp = explode('.', $file_name);
+$file_extension = end($tmp);
+The problem is, that end requires a reference, because it modifies the internal representation of the array (i.e. it makes the current element pointer point to the last element).
+
+The result of explode('.', $file_name) cannot be turned into a reference. This is a restriction in the PHP language, that probably exists for simplicity reasons
+
 ```
 
 
