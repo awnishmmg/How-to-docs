@@ -7,7 +7,17 @@ https://drive.google.com/drive/folders/1CbjEwD5RI2OqrtXphUbmtLjeoNPG_W8i
 ### Coding Passing Income | https://www.youtube.com/c/CodingPassiveIncome/playlists
 ### Sonar System | https://www.youtube.com/channel/UCkJYfCcenyjHr3DZ9JWHbkQ
 
+# Top Ten Activities we can do using PHP Curl
+
+### https://catswhocode.com/php-curl-example/
+
 # How to setup mulitple Application at different Subdomain and to feed with single base_system_installation.
+```
+Make a Folder Parallel to index.php
+Put the Folder of Any Application Parallel and Put index.php with Few Changes
+1. Put .htaccess
+2. Open index.php from any index.php from any sublime text or Any Test Editor and then change, application folder path, system path and Thats Done.
+```
 
 # How to Change the base_url as dynamically As per Requirement in the 
 
