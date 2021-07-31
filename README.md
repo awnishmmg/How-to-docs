@@ -1,4 +1,5 @@
 # Working with colored PHP CLI Escape Codes
+https://joshtronic.com/2013/09/02/how-to-use-colors-in-command-line-output/
 
 # Customised Url for CodeIgnitor-remove-index-php-minimize-url
 
