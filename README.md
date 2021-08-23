@@ -1170,3 +1170,6 @@ function SaveDataToLocalStorage(data)
     localStorage.setItem('session', JSON.stringify(a));
 }
 ```
+# How to Read the data and replace the content of inside php doc file.
+
+http://www.onlinecode.org/update-docx-file-using-php/
