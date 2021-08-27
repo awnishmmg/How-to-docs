@@ -1173,3 +1173,11 @@ function SaveDataToLocalStorage(data)
 # How to Read the data and replace the content of inside php doc file.
 
 http://www.onlinecode.org/update-docx-file-using-php/
+
+# How to bind template data into JS using Ajax in CodeIgnitor.
+$string = $this->parser->parse('purchase/price_log/table_listing', $data, TRUE);
+		$return_array = array(
+			'html' => $string,
+			'application_data' => ,
+		);
+echo json_encode($return_array);exit;
