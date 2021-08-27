@@ -3,6 +3,23 @@
 ### Prepare the dataSet From the database ###
 
 ```
+
+$pieChartsData = [];
+
+		foreach ($sms_count_data as $key => $data_xy) {
+			foreach ($data_xy as $label => $value) {
+				$pieChartsData[] = [
+					'label' => $label,
+					'value' => $value,
+				];
+			}
+		}
+// prx($pieChartsData);
+
+```
+
+
+```
 if(data.length){
 
 Morris.Donut({
