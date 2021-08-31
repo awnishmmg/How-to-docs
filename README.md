@@ -903,7 +903,17 @@ echo "</thead>";
 echo "<table>";
 
 ```
+# Best Question to Remove duplicate Character from the string
 
+```
+$str = "Hooppiing too be coool cooderr";
+$arr = explode(" ", $str);
+function escapedString($item){
+	echo join("",array_unique(str_split(" ".$item." ")));
+}
+array_walk($arr, 'escapedString');
+
+```
 
 # How to Force Zoom in Magnific.popup 
 https://stackoverflow.com/questions/33431471/how-to-zoom-in-120-150-and-180-on-an-image
