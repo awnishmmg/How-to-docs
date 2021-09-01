@@ -812,9 +812,52 @@ The result of explode('.', $file_name) cannot be turned into a reference. This i
     }]
 }]}
 
+### Question Based On array_walk 
+```
+<?php
+
+$str = "HHHooooppppiiiinnnnggggg tttoooo bbbbeeeee BBBBeeeeessssstttttt CCCCCooooodddddeeeerrrrr";
+$explode = explode(" ",$str);
+echo '<pre>';
+print_r($explode);
+
+array_walk($explode, function($item){
+	echo join("",array_unique(str_split(" ".$item." ")));
+});
+
+
+echo '</pre>';
+
+$str = "1,2,3,4,5,6";
+
+$new_array = [];
+$exploded_arr = explode(",",$str);
+array_walk($exploded_arr, function($item){
+	global $new_array;
+
+	$cube = $item*$item*$item;
+	$new_array[]= $cube;
+});
+
+echo implode(",",$new_array);
+
+
+
+/*
+[0]='H'
+[1]='H' // --> [0] = ' H '
+[2]='H'
+[3]='o'// ---> [1] = 'o'
+[4]='o'
+[5]='o'
+
+*/
+
+
 
 
 ```
+
 ### Parsing using Parse-Json.php In php
 
 ![screencapture-localhost-json-to-html-parse-json-php-2021-07-22-18_39_16 (1)](https://user-images.githubusercontent.com/55636215/126644401-98329ee0-0953-43d8-85cb-fb888fb1bcd3.png)
