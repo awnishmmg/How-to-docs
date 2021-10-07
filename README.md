@@ -1237,3 +1237,319 @@ $string = $this->parser->parse('purchase/price_log/table_listing', $data, TRUE);
 		);
 echo json_encode($return_array);exit;
 ```
+# How to create the nav-pills using Bootstrap and dynamic activation 
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Dynamic Tabs</h2>
+  <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+
+  <ul class="nav nav-tabs">
+    <li ><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>HOME</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+
+
+  
+</div>
+
+</body>
+</html>
+```
+# Making Dynamic Nav Tabs logic 
+```
+	
+
+<div class="content-wrapper" >
+	 <section class="content-header">
+      <h1>
+        <b>Super Admin Accounts</b>
+      </h1>
+      <ol class="breadcrumb">
+         <li><a href="<?php echo base_url(); ?>dashoard"><i class="fa fa-dashboard"></i> Home</a></li>
+         <li class="active">Super Admin Accounts</li>
+      </ol>
+   </section>
+    <section class="content">
+    	<div class="row">
+         <div class="col-lg-12">
+            <div class="box">
+              <div class="overlay" id="ledger_listing" style="display: none;">
+                <i class="fa fa-refresh fa-spin"></i>
+              </div>
+               <div class="box-header">
+                  <div class="col-lg-12">
+
+                     <div class="col-lg-4">
+                        <b>Service Wise Super Admin Accounts</b>
+                     </div>
+
+                     
+                     <div class="col-lg-2" style="float: right">
+                  <a href="<?php echo base_url(); ?>master/vendor_accounts/add">
+                   <button class="btn btn-default" style="float: right"> <i class="fa fa-plus"></i> New Super Admin Account</button>
+                  </a>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col-lg-12">
+                <div class="nav-tabs-custom">
+                    
+                <ul class="nav nav-tabs">
+                    <?php $count=1; ?>
+                    <?php foreach($nav_tabs as $nav) :?>
+
+                    <?php if($count==1): ?>
+                    <li class="active">
+                        <a href="<?php echo "#custom_$count"; ?>" data-toggle="tab"><b><?php echo ucfirst($nav['name']); ?></b></a>
+                    </li>
+                    <?php else: ?>
+                        <li>
+                             <a href="<?php echo "#custom_$count"; ?>" data-toggle="tab"><b><?php echo ucfirst($nav['name']); ?></b></a>
+                        </li>
+                    <?php endif; ?>
+                  <?php $count++; endforeach; ?>
+
+                </ul>
+              
+              </div>
+               </div>
+
+
+
+
+               <div class="tab-content">
+
+                <?php $count=1; ?>
+                <?php foreach($nav_tabs as $nav) :?>
+                <?php if($count==1): ?>    
+                
+               <div id="<?php echo "custom_{$count}"; ?>" class="tab-pane fade in active">
+                    <h3 class="container"><?php echo ucfirst($nav['name']); ?></h3>
+                     <hr/>
+                    <div class="box-body table-responsive">
+                  <table id="<?php echo "example{$count}";?>" class="table table-bordered table-striped">
+                     <thead>
+                        <tr>
+                           <th>Creation Date</th>
+                           <th>User Name</th>
+                           <th>Application Name</th>
+                           <th>Vendor Name</th>
+                           <th>Product Name</th>
+                           <th>Account type</th>
+                           <th>Action</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                     <?php foreach ($vendor_accounts as $key => $row): ?>
+                        <?php if($row['setting_service_id']==$nav['id']): ?>
+                        <tr>
+                           <td><?php echo getFormatedDate($row['added_date']);  ?></td>
+                           <td><?php echo $row['user_name'];  ?></td>
+                           <td><?php echo $row['application_name'];  ?></td>
+                           <td><?php echo $row['vendor_name'];  ?></td>
+                           <td><?php echo $row['product_name'];  ?></td>
+                           <td>
+                            <span class="label <?php if($row['account_type'] == 'Prepaid Account'){ echo 'label-success';}elseif($row['account_type'] == 'PostPaid Recharge'){echo 'label-warning';}else{ echo 'label-primary';}?>">
+                              <?php echo $row['account_type'];  ?>
+                            </span>               
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-danger" onclick="handleDelete(<?php echo $row['id']; ?>)"><i class="fa fa-trash" title="Delete"></i></button>
+                                <a href="<?php echo base_url(); ?>master/vendor_accounts/edit?id=<?php echo $row['id']; ?>" title="Edit" class="btn btn-sm btn-success"><i class="fa fa-edit" title="Edit"></i></a>
+                                <a href="<?php echo base_url(); ?>master/vendor_accounts/view?id=<?php echo $row['id']; ?>" title="Edit" class="btn btn-sm btn-info"><i class="fa fa-eye" title="View"></i></a>
+
+                            </td>
+                        </tr>
+
+                        <?php else: ?>
+                            <!-- Some Else Code With Break -->
+                        <?php endif;  ?>
+
+                        <?php endforeach; ?>
+                     </tbody>
+                    
+                  </table>
+                    </div> 
+
+              </div>
+                <!-- End of First Nav-tabs -->
+                 <?php else: ?>
+                <!-- Tab Content --->
+                <div id="<?php echo "custom_{$count}"; ?>" class="tab-pane fade">
+                 <h3 class="container"><?php echo ucfirst($nav['name']); ?></h3>
+                 <hr/>
+                 <div class="box-body table-responsive">
+                  <table id="<?php echo "example{$count}";?>" class="table table-bordered table-striped">
+                     <thead>
+                        <tr>
+                           <th>Creation Date</th>
+                           <th>User Name</th>
+                           <th>Application Name</th>
+                           <th>Vendor Name</th>
+                           <th>Product Name</th>
+                           <th>Account type</th>
+                           <th>Action</th>
+                        </tr>
+                     </thead>
+                     
+                     <tbody>
+                        <?php foreach ($vendor_accounts as $key => $row): ?>
+                        <?php if($row['setting_service_id']==$nav['id']): ?>
+                        <tr>
+                           <td><?php echo getFormatedDate($row['added_date']);  ?></td>
+                           <td><?php echo $row['user_name'];  ?></td>
+                           <td><?php echo $row['application_name'];  ?></td>
+                           <td><?php echo $row['vendor_name'];  ?></td>
+                           <td><?php echo $row['product_name'];  ?></td>
+                           <td>
+                            <span class="label <?php if($row['account_type'] == 'Prepaid Account'){ echo 'label-success';}elseif($row['account_type'] == 'PostPaid Recharge'){echo 'label-warning';}else{ echo 'label-primary';}?>">
+                              <?php echo $row['account_type'];  ?>
+                            </span>               
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-danger" onclick="handleDelete(<?php echo $row['id']; ?>)"><i class="fa fa-trash" title="Delete"></i></button>
+                                <a href="<?php echo base_url(); ?>master/vendor_accounts/edit?id=<?php echo $row['id']; ?>" title="Edit" class="btn btn-sm btn-success"><i class="fa fa-edit" title="Edit"></i></a>
+                                <a href="<?php echo base_url(); ?>master/vendor_accounts/view?id=<?php echo $row['id']; ?>" title="Edit" class="btn btn-sm btn-info"><i class="fa fa-eye" title="View"></i></a>
+
+                            </td>
+                        </tr>
+
+                        <?php else: ?>
+                              <!-- Some Else Code With Break -->
+                        <?php endif;  ?>
+
+                        <?php endforeach; ?>
+                     </tbody>
+                   
+                  </table>
+                </div> 
+                    
+                
+                </div>
+                <!-- Tab Content -->
+
+                <?php endif; ?>
+                <?php $count++; endforeach; ?>
+
+               <!-- /.box-body -->
+            </div>
+            <!-- Box Container -->
+
+         </div>
+      </div>
+    </section>
+</div>
+
+<!-- /.content-wrapper -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <form action="" method="POST" id="deletePost">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+          <h4 class="modal-title" id="deleteModalLabel">Super Admin Accounts Delete</h4> </div>
+        <div class="modal-body">
+          <p class="text-center text-bold"> Are you sure want to delete this Super Admin Accounts? </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No,Go Back</button>
+          <button type="submit" class="btn btn-danger">Yes Delete</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+        var index = "<?php echo count($nav_tabs); ?>";
+
+        for(var i=1;i<=index;i++){
+            init_Datables(i);
+        }
+		
+	});
+
+
+    function init_Datables(i){
+        $('#example'+i).DataTable({
+         dom: 'Bfrtip',
+         responsive: true,
+         buttons: [
+      
+            {
+            extend: 'copy',
+            text: '<i class="fa fa-clipboard"></i> Copy',
+      
+            },
+       
+            {
+                extend: 'pdf',
+                text: '<i class="fa fa-file-pdf-o"></i> PDF',
+            
+            },
+        
+            {
+                extend: 'csv',
+                text: '<img src="<?php echo base_url(); ?>assets/images/csv-icon.png" style="width: 18px;"> CSV',
+       
+               
+            },
+            {
+                extend: 'excel',
+                text: '<img src="<?php echo base_url(); ?>assets/images/excel.png" style="    width: 18px;"> Excell',
+            },
+       
+            {
+                extend: 'print',
+                text: '<i class="fa fa-print"></i> Print',
+       
+            }        
+           
+       
+         ],
+   });
+
+}
+
+  function handleDelete(id){
+        var form = document.getElementById('deletePost');
+        form.action = '<?php echo base_url(); ?>master/vendor_accounts/delete?id='+id;
+        $('#deleteModal').modal('show');
+    }
+</script>
+```
