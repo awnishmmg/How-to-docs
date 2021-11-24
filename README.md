@@ -1553,3 +1553,91 @@ echo json_encode($return_array);exit;
     }
 </script>
 ```
+	
+## How to Re-Initialise the Data-tables while using nav-tabs
+```
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+
+
+    var index = "<?php echo count($nav_tabs); ?>";
+
+        for(var i=1;i<=index;i++){
+            init_Datables(i);
+    }
+
+    function init_Datables(i){
+
+	var datatableInstance =  $('#example'+i).DataTable({
+         dom: 'Bfrtip',
+         responsive: true,
+         buttons: [
+      
+            {
+            extend: 'copy',
+            text: '<i class="fa fa-clipboard"></i> Copy',
+      
+            },
+       
+            {
+                extend: 'pdf',
+                text: '<i class="fa fa-file-pdf-o"></i> PDF',
+                exportOptions:{
+                    columns: ':visible'
+                },
+            
+            },
+        
+            {
+                extend: 'csv',
+                text: '<img src="<?php echo base_url(); ?>assets/images/csv-icon.png" style="    width: 18px;"> CSV',
+                exportOptions:{
+                    columns: ':visible'
+                },
+       
+               
+            },
+            {
+                extend: 'excel',
+                text: '<img src="<?php echo base_url(); ?>assets/images/excel.png" style="    width: 18px;"> Excell',
+                exportOptions:{
+                    columns: ':visible'
+                },
+            },
+       
+            {
+                extend: 'print',
+                text: '<i class="fa fa-print"></i> Print',
+                exportOptions:{
+                    columns: ':visible'
+                },
+       
+            },
+        
+         ],
+   });
+   
+}
+    // datatableInstance.columns([7]).visible(true);
+    
+    //Show and Hide Logic
+    $('.show-hide-columns').on('click', function () {
+        var tableColumn = datatableInstance.column($(this).attr('data-columnindex'));
+        tableColumn.visible(!tableColumn.visible());
+    });
+    
+    
+	});
+  function handleDelete(id){
+        var form = document.getElementById('deletePost');
+        form.action = "<?php echo base_url("master/vendor-template/delete/"); ?>"+id;
+        $('#deleteModal').modal('show');
+    }
+
+  function uploadTemplateForm(element){
+  	 $('#upoadForm').modal('show');
+  }
+</script>
+	
+```
