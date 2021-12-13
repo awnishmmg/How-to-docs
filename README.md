@@ -1645,7 +1645,7 @@ echo json_encode($return_array);exit;
 ### Case 1
 	
 ```
-public function clearStdin()
+function clearStdin()
 {
     for ($i = 0; $i < 50; $i++) echo "\r\n";
 }
