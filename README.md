@@ -1641,3 +1641,23 @@ echo json_encode($return_array);exit;
 </script>
 	
 ```
+# How to clear the console
+### Case 1
+	
+```
+public function clearStdin()
+{
+    for ($i = 0; $i < 50; $i++) echo "\r\n";
+}
+```
+### Case 2
+
+```
+echo "\e[H\e[J";
+		 
+```
+### Case 3
+			 
+```
+echo chr(27).chr(91).'H'.chr(27).chr(91).'J';   //^[H^[J  
+```
